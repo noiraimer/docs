@@ -1,5 +1,5 @@
 * 笔记本
-* [国考](http://localhost:3000/#/%E5%9B%BD%E8%80%83/%E5%B8%B8%E8%AF%86%E5%88%A4%E6%96%AD/%E5%93%B2%E5%AD%A6%E6%A6%82%E8%AE%BA ':target=_self')
+* [国考](%E5%9B%BD%E8%80%83/%E5%B8%B8%E8%AF%86%E5%88%A4%E6%96%AD/%E5%93%B2%E5%AD%A6%E6%A6%82%E8%AE%BA ':target=_self')
 * ---
 
 * 目录
