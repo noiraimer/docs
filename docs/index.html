@@ -35,6 +35,31 @@
       name: '国考知识库',
       nameLink: '/#/',
       repo: '',
+
+      search: {
+        noData: {
+          '/国考/': '没有结果!',
+          '/': 'No results!'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/国考/': 'Suche',
+          '/': 'Search'
+        }
+      },
+      formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function (html) {
+            var url = 'https://github.com/noiraimer/docs/blob/master/docs/' + vm.route.file
+            var editHtml = '[:memo: Edit Document](' + url + ')\n'
+            return html
+              + '\n----\n'
+              + '最近修改:{docsify-updated} '
+              + editHtml
+          })
+        }
+      ]
     }
   </script>
   <!-- docsify-themeable (latest v0.x.x) -->
@@ -42,6 +67,6 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <!-- plugins -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
-  
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
