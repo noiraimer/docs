@@ -20,10 +20,12 @@
         '/.*/_sidebar.md': '_sidebar.md',
         '/.*/_navbar.md': '_navbar.md'
       },
+      // theme-simple
       themeable: {
           readyTransition : true, // default
           responsiveTables: true  // default
       },
+      // 导航
       pagination: {
       previousText: '上一章节',
       nextText: '下一章节',
@@ -35,7 +37,7 @@
       name: '国考知识库',
       nameLink: '/#/',
       repo: '',
-
+      // 搜索
       search: {
         noData: {
           '/国考/': '没有结果!',
@@ -48,6 +50,7 @@
           '/': 'Search'
         }
       },
+      // foot
       formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
       plugins: [
         function(hook, vm) {
@@ -69,5 +72,12 @@
   <!-- plugins -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/noiraimer/docs/docs/assets/search.min.js"></script>
+
+  <!-- pwa -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
 </body>
 </html>
